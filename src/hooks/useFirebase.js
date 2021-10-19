@@ -44,17 +44,17 @@ const useFirebase = () => {
       .catch((error) => {
         setError(error.message);
       });
-  };
-  signInWithEmailAndPassword(auth, email, password)
-    .then((result) => {
-      const user = result.user;
-      setError("");
-    })
-    .catch((error) => {
-      setError(error.message);
-    });
+    signInWithEmailAndPassword(auth, email, password)
+      .then((result) => {
+        const user = result.user;
+        setError("");
+      })
+      .catch((error) => {
+        setError(error.message);
+      });
 
-  console.log(email, password);
+    console.log(email, password);
+  };
 
   // Toggle handler function
   const handleToggle = (e) => {
