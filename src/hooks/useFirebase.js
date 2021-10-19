@@ -36,7 +36,6 @@ const useFirebase = () => {
       return;
     }
 
-    
     createUserWithEmailAndPassword(auth, email, password)
       .then((result) => {
         const user = result.user;
